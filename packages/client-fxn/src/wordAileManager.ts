@@ -106,27 +106,8 @@ export class WordAileManager {
         // Start new guess cycle
         await this.startGuessCycle();
 
-        // Set timer for GAME end
-        this.roundTimer = setTimeout(async () => {
-            // When time is up, find the player with the most wins
-            let winner: string | null = null;
-            let maxWins = 0;
-
-            this.gameState.winners.forEach((wins, publicKey) => {
-                if (wins > maxWins) {
-                    maxWins = wins;
-                    winner = publicKey;
-                }
-            });
-
-            if (winner) {
-                // We have a winner with the most wins
-                await this.endGame(winner);
-            } else {
-                // No wins recorded - start fresh game
-                await this.startNewGame();
-            }
-        }, this.ROUND_DURATION);
+        // Set timer for round end
+        this.roundTimer = setTimeout(() => this.startNewRound(), this.ROUND_DURATION);
     }
 
     public async handleGuess(publicKey: string, guess: string): Promise<{
@@ -173,6 +154,17 @@ export class WordAileManager {
 
         // Update the state
         this.gameState.boardStates.set(publicKey, boardState);
+
+        const allPlayersOutOfGuesses = this.areAllPlayersOutOfGuesses();
+        if (allPlayersOutOfGuesses) {
+            // Start new round since no one can guess anymore
+            await this.startNewRound();
+            return {
+                boardState,
+                roundOver: true,
+                gameOver: false
+            };
+        }
 
         return {
             boardState,
@@ -260,6 +252,20 @@ export class WordAileManager {
         });
 
         await this.startRoundTimer();
+    }
+
+    private areAllPlayersOutOfGuesses(): boolean {
+        // If there are no board states, return false
+        if (this.gameState.boardStates.size === 0) {
+            return false;
+        }
+
+        // Check if all players have either:
+        // 1. Used all their guesses, or
+        // 2. Completed their game (won or lost)
+        return Array.from(this.gameState.boardStates.values()).every(
+            boardState => boardState.isComplete || boardState.guessCount >= this.MAX_GUESSES
+        );
     }
 
     public getCurrentRoundStartTime(): number {
