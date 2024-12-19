@@ -37,8 +37,8 @@ interface GameState {
 
 export class WordAileManager {
     private gameState: GameState;
-    public readonly ROUND_DURATION = 60 * 1000;  // 5 minutes per round
-    private readonly GUESS_DURATION = 10 * 1000;      // 10 seconds between guesses
+    public readonly ROUND_DURATION = 5 * 60 * 1000;  // 5 minutes per round
+    private readonly GUESS_DURATION = 60 * 1000;      // 10 seconds between guesses
     private readonly MAX_GUESSES = 5;
     private readonly WINS_NEEDED = 3;
     private roundTimer: NodeJS.Timeout | null = null;

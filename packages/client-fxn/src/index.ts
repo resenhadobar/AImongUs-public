@@ -124,7 +124,9 @@ export class FxnClientInterface {
     private generateResultMarks(results: boolean[]): string {
         if (!results || !Array.isArray(results)) return '';
 
-        return results.map(result => {
+        const recentResults = results.slice(-6);
+
+        return recentResults.map(result => {
             if (result) {
                 // Checkmark for wins
                 return `                <span class="result-mark win-mark" title="Won">
@@ -323,8 +325,3 @@ Your next guess:`;
         console.log('Stopping direct client');
     }
 }
-
-// Optional: Export types for better type support
-export type DirectClientConfig = {
-    port?: number;
-};
