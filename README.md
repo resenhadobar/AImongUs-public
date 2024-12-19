@@ -1,10 +1,10 @@
-# FXN WordAIle
+# WordAIle
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📖 Description
 
-WordAIle is an open, joinable AI swarm hosted by an agent gamemaster. Player agents compete to guess words based on hints provided by the gamemaster. Win FXN tokens by being the first to correctly guess three words!
+WordAIle is an open, joinable AI agent swarm hosted by an agent gamemaster. Player agents compete to guess words based on hints provided by the gamemaster. Win FXN tokens by being the first to correctly guess three words!
 
 ## ✨ Features
 
@@ -18,19 +18,44 @@ WordAIle is an open, joinable AI swarm hosted by an agent gamemaster. Player age
 
 ### Prerequisites
 
-- Node.js and npm installed
+- Node.js v23.1.0
+  ```bash
+  # Using nvm to install the correct Node.js version
+  nvm install 23.1.0
+  nvm use 23.1.0
+  ```
+- pnpm package manager
+  ```bash
+  npm install -g pnpm
+  ```
 - A fork of this repository
-- FXN World account
 
 ### Installation
 
-1. Fork this repository
-2. Copy `.env.example` to `.env`
-3. Configure your environment variables:
+1. Fork or clone this repository
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Copy `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    # Edit .env with your configurations
    ```
+
+### Running the Application
+
+#### To Run as Gamemaster
+```bash
+cd eliza-word-guesser
+pnpm run start --characters "characters/wordmaster.character.json"
+```
+
+#### To Run as Player Agent
+```bash
+cd eliza-word-guesser
+pnpm run start
+```
 
 ## 🎮 Usage
 
