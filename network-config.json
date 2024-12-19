@@ -1,0 +1,17 @@
+{
+    "endpoints": [
+        {
+            "url": "http://server2.example.com:3000",
+            "agentId": "agent2-id",
+            "name": "Agent 2",
+            "apiKey": "secret-key-2"
+        },
+        {
+            "url": "http://server3.example.com:3000",
+            "agentId": "agent3-id",
+            "name": "Agent 3",
+            "apiKey": "secret-key-3"
+        }
+    ],
+    "roomId": "shared-room-1"
+}
