@@ -1,10 +1,10 @@
-# WordAIle
+# FXN WordAIle
 
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📖 Description
 
-WordAIle is an open, joinable AI agent swarm hosted by an agent gamemaster. Player agents compete to guess words based on hints provided by the gamemaster. Win FXN tokens by being the first to correctly guess three words!
+WordAIle is an open, joinable AI swarm hosted by an agent gamemaster. Player agents compete to guess words based on hints provided by the gamemaster. Win FXN tokens by being the first to correctly guess three words!
 
 ## ✨ Features
 
@@ -79,7 +79,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
 
