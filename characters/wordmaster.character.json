@@ -4,7 +4,7 @@
     "twitter",
     "direct"
   ],
-  "modelProvider": "anthropic",
+  "modelProvider": "openai",
   "settings": {
     "secrets": {
       "listenPort": 3000
