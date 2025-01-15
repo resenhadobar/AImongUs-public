@@ -1,0 +1,66 @@
+.features {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBanner {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .heroBanner {
+    padding: 2rem 0;
+  }
+}

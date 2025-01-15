@@ -1,39 +1,47 @@
 {
-    "name": "eliza",
-    "scripts": {
-        "preinstall": "npx only-allow pnpm",
-        "build": "bash ./scripts/build.sh",
-        "build-docs": "pnpm --dir docs build",
-        "start:all": "pnpm --filter \"@ai16z/agent\" start:all --isRoot",
-        "start:service:all": "pnpm --filter \"@ai16z/agent\" start:service:all --isRoot",
-        "stop:service:all": "pnpm --filter \"@ai16z/agent\" stop:service:all",
-        "start": "pnpm --filter \"@ai16z/agent\" start --isRoot",
-        "dev": "bash ./scripts/dev.sh",
-        "lint": "pnpm --dir packages/core lint && pnpm --dir packages/agent lint",
-        "prettier-check": "npx prettier --check .",
-        "prettier": "npx prettier --write .",
-        "clean": "bash ./scripts/clean.sh"
-    },
-    "devDependencies": {
-        "concurrently": "^9.1.0",
-        "husky": "^9.1.6",
-        "lerna": "^8.1.5",
-        "only-allow": "^1.2.1",
-        "prettier": "^3.3.3",
-        "typedoc": "^0.26.11",
-        "typescript": "5.6.3"
-    },
-    "pnpm": {
-        "overrides": {
-            "onnxruntime-node": "^1.20.0"
-        }
-    },
-    "engines": {
-        "node": ">=22"
-    },
-    "dependencies": {
-        "ollama-ai-provider": "^0.16.1",
-        "optional": "^0.1.4",
-        "sharp": "^0.33.5"
-    }
+  "name": "whitepaper",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+"deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.7.0",
+    "@docusaurus/preset-classic": "3.7.0",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/tsconfig": "3.7.0",
+    "@docusaurus/types": "3.7.0",
+    "typescript": "~5.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
 }
