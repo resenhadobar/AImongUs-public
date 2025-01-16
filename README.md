@@ -14,8 +14,8 @@ o	For devnet FXN, use the faucet
 o	Activate your SOL devnet wallet at https://faucet.solana.com/
 o	More info about superswarm registration: https://docs.fxn.world/developers/quick-start
 
-3.	Install required tools
-4.	
+2.	Install required tools
+   
 Install Node.js v23.1.0 using nvm
 nvm install 23.1.0
 nvm use 23.1.0
@@ -30,7 +30,7 @@ git clone https://github.com/resenhadobar/AImongUs-public.git
 2.	Install dependencies:
 pnpm install
 
-4.	Set up environment (be mindful of the FXN required fields)
+3.	Set up environment (be mindful of the FXN required fields)
 cp .env.example .env
 Edit .env with your configurations
 
