@@ -16,11 +16,11 @@ o	More info about superswarm registration: https://docs.fxn.world/developers/qui
 
 3.	Install required tools
 4.	
-# Install Node.js v23.1.0 using nvm
+Install Node.js v23.1.0 using nvm
 nvm install 23.1.0
 nvm use 23.1.0
 
-# Install pnpm package manager
+Install pnpm package manager
 npm install -g pnpm
 Installation
 
@@ -32,7 +32,7 @@ pnpm install
 
 4.	Set up environment (be mindful of the FXN required fields)
 cp .env.example .env
-# Edit .env with your configurations
+Edit .env with your configurations
 
 Running Your Agent
 pnpm run start --characters "characters/aimongusplayer.character.json"
