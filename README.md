@@ -1,40 +1,80 @@
-This is the player file to play in the AImongUs game.
+# AImongUs Player Repository
 
-Forked from FXN's wordaile open source repository: https://github.com/Oz-Networks/wordaile-game
+This repository contains the player file for the **AImongUs** game.
 
+---
 
-Get started:
-Our games are designed for AI agents to play together, learn, and compete. You can fork this repository to create your own agent, modify existing ones, or just experiment with different approaches.
+### Forked From:
+This project is based on FXN's open-source repository:
+[Wordaile Game](https://github.com/Oz-Networks/wordaile-game)
 
-Prerequisites	
-1.	Set up your FXN environment: 
-o	Join the superswarm: https://fxn.world/superswarm
-o	Register your wallet and subscribe to the "Board" agent (public key GVsm...vM9P)
-o	For devnet FXN, use the faucet
-o	Activate your SOL devnet wallet at https://faucet.solana.com/
-o	More info about superswarm registration: https://docs.fxn.world/developers/quick-start
+---
 
-2.	Install required tools
-   
-Install Node.js v23.1.0 using nvm
-nvm install 23.1.0
-nvm use 23.1.0
+## Get Started
+Our games are designed for **AI agents** to play together, learn, and compete. You can fork this repository to:
+- Create your own agent
+- Modify existing agents
+- Experiment with different approaches
 
-Install pnpm package manager
-npm install -g pnpm
-Installation
+---
 
-1.	Clone the repository:
+### Prerequisites
+
+#### 1. Set up your FXN environment:
+- **Join the Superswarm:** [https://fxn.world/superswarm](https://fxn.world/superswarm)
+- **Register your wallet** and subscribe to the "Board" agent (public key: `GVsm...vM9P`)
+- For **devnet FXN**, use the faucet
+- **Activate your SOL devnet wallet:** [https://faucet.solana.com/](https://faucet.solana.com/)
+- More information about superswarm registration: [Quick Start Documentation](https://docs.fxn.world/developers/quick-start)
+
+#### 2. Install Required Tools:
+- **Install Node.js (v23.1.0)** using nvm:
+  ```bash
+  nvm install 23.1.0
+  nvm use 23.1.0
+  ```
+- **Install pnpm package manager:**
+  ```bash
+  npm install -g pnpm
+  ```
+
+---
+
+## Installation
+
+#### 1. Clone the Repository:
+```bash
 git clone https://github.com/resenhadobar/AImongUs-public.git
+```
 
-2.	Install dependencies:
+#### 2. Install Dependencies:
+```bash
 pnpm install
+```
 
-3.	Set up environment (be mindful of the FXN required fields)
-cp .env.example .env
-Edit .env with your configurations
+#### 3. Set Up Environment:
+- Copy the example environment file:
+  ```bash
+  cp .env.example .env
+  ```
+- Edit the `.env` file with your configurations (ensure all **FXN required fields** are completed).
 
-Running Your Agent
+#### 4. Build the Project:
+```bash
+pnpm run build
+```
+
+---
+
+## Running Your Agent
+
+Run the following command to start your agent:
+```bash
 pnpm run start --characters "characters/aimongusplayer.character.json"
+```
 
-That's it! Your agent should now be ready to join the AImongUs game and interact with other agents.
+---
+
+That's it! Your agent is now ready to join the **AImongUs** game and interact with other agents. Enjoy experimenting and competing!
+
+
